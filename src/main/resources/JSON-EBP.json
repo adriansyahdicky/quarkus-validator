@@ -1,0 +1,179 @@
+{
+	"organization": {
+		"organizationCif": "",
+		"groupOrganizationCif": "0",
+		"proposalNumber": "12345678",
+		"version": "",
+		"transactionCode": "SUBMISSION"
+	},
+	"program": {
+		"productCode": "101",
+		"planCode": "01",
+		"effectiveDate": "2023-05-30",
+		"insuranceStartDate": "2023-05-30",
+		"insurancedPeriod": {
+			"insurancedPeriodMethod": "RETIRED_AGE",
+			"insurancedPeriodValueYear": "60",
+			"insurancedPeriodValueMonth": "0",
+			"insurancedPeriodValueDay": "0"
+		},
+		"fundPortion": [
+			{
+				"fundCode": "EBPL",
+				"fundPortion": "80"
+			},
+			{
+				"fundCode": "EBPD",
+				"fundPortion": "20"
+			}
+		],
+		"assumption": {
+			"salaryAdjustment": "0"
+		},
+		"cost": {
+			"administrationFee": "2",
+			"managementFee": "0.1"
+		},
+		"mainBenefit": {
+			"benefitCode": "DEATH_ACCIDENT",
+			"benefitMethod": "UUCK",
+			"rateCode": ""
+		},
+		"additionalMainBenefit": [
+			{
+				"benefitCode": "NATURAL_DEATH",
+				"benefitMethod": "UUK13_EXP",
+				"rateCode": ""
+			},
+			{
+				"benefitCode": "TOTAL_DISABILITY",
+				"benefitMethod": "UUK13_TPD",
+				"rateCode": ""
+			}
+		],
+		"riderBenefit": [],
+		"paymentFrequency": "MONTHLY",
+		"premiumPeriodic": {
+			"premiumPeriodicMethod": "PERCENTAGE",
+			"premiumPeriodicValue": "5"
+		},
+		"premiumMethod": {
+			"method": "PERCENTAGE",
+			"premiumMethodValue": "5"
+		},
+		"contributoryOrganizationValue": "0"
+	},
+	"insured": [
+		{
+			"personCif": "d3488a95-bd4f-484b-9a7b-bc721b530006",
+			"dateOfBirth": "1995-10-20",
+			"dateOfWork": "2014-06-10",
+			"wages": "20000000",
+			"backServicePremium": "50000000",
+			"comingServicePremium": "0",
+			"maritalStatus": "MARRIED",
+			"sex": "MALE",
+			"mainBenefit": {
+				"benefitCode": "DEATH_ACCIDENT",
+				"benefitValue": "0",
+				"uwParams": {
+					"emPersen": "0",
+					"emPermill": "0"
+				}
+			},
+			"additionalMainBenefit": [
+				{
+					"benefitCode": "NATURAL_DEATH",
+					"benefitValue": "0",
+					"uwParams": {
+						"emPersen": "0",
+						"emPermill": "0"
+					}
+				},
+				{
+					"benefitCode": "TOTAL_DISABILITY",
+					"benefitValue": "0",
+					"uwParams": {
+						"emPersen": "0",
+						"emPermill": "0"
+					}
+				}
+			],
+			"riderBenefit": []
+		},
+		{
+			"personCif": "347b3ae5-33aa-4e80-9447-c6a5f386f0a7",
+			"dateOfBirth": "1995-10-20",
+			"dateOfWork": "2014-06-10",
+			"wages": "20000000",
+			"backServicePremium": "50000000",
+			"comingServicePremium": "0",
+			"maritalStatus": "MARRIED",
+			"sex": "MALE",
+			"mainBenefit": {
+				"benefitCode": "DEATH_ACCIDENT",
+				"benefitValue": "0",
+				"uwParams": {
+					"emPersen": "0",
+					"emPermill": "0"
+				}
+			},
+			"additionalMainBenefit": [
+				{
+					"benefitCode": "NATURAL_DEATH",
+					"benefitValue": "0",
+					"uwParams": {
+						"emPersen": "0",
+						"emPermill": "0"
+					}
+				},
+				{
+					"benefitCode": "TOTAL_DISABILITY",
+					"benefitValue": "0",
+					"uwParams": {
+						"emPersen": "0",
+						"emPermill": "0"
+					}
+				}
+			],
+			"riderBenefit": []
+		},
+		{
+			"personCif": "63c78eb1-fb27-4218-838a-b7ae9ef49e72",
+			"dateOfBirth": "1990-10-20",
+			"dateOfWork": "2014-06-10",
+			"wages": "20000000",
+			"backServicePremium": "50000000",
+			"comingServicePremium": "0",
+			"maritalStatus": "MARRIED",
+			"sex": "MALE",
+			"mainBenefit": {
+				"benefitCode": "DEATH_ACCIDENT",
+				"benefitValue": "0",
+				"uwParams": {
+					"emPersen": "0",
+					"emPermill": "0"
+				}
+			},
+			"additionalMainBenefit": [
+				{
+					"benefitCode": "NATURAL_DEATH",
+					"benefitValue": "0",
+					"uwParams": {
+						"emPersen": "0",
+						"emPermill": "0"
+					}
+				},
+				{
+					"benefitCode": "TOTAL_DISABILITY",
+					"benefitValue": "0",
+					"uwParams": {
+						"emPersen": "0",
+						"emPermill": "0"
+					}
+				}
+			],
+			"riderBenefit": []
+		}
+	]
+}
