@@ -1,7 +1,11 @@
 package org.acme.dto;
 
+import org.acme.validation.DatabaseValidation;
+
 public class EbpCostDTO {
+    @DatabaseValidation(key = "administrationFee")
     private String administrationFee;
+    @DatabaseValidation(key = "managementFee")
     private String managementFee;
 
     public String getAdministrationFee() {

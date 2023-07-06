@@ -1,7 +1,11 @@
 package org.acme.dto;
 
+import org.acme.validation.DatabaseValidation;
+
 public class EbpUwParamsDTO {
+    @DatabaseValidation(key = "emPersen")
     private String emPersen;
+    @DatabaseValidation(key = "emPermill")
     private String emPermill;
 
     public String getEmPersen() {

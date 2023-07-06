@@ -1,23 +1,16 @@
 package org.acme.dto;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+
+import org.acme.validation.DatabaseValidation;
 
 public class EbpInsurancePeriodDTO {
-    @NotBlank(message = "Insurance Period Method cannot be null")
+    @DatabaseValidation(key = "insurancedPeriodMethod")
     private String insurancedPeriodMethod;
-
-    @NotNull(message = "Insurance Period Value Year cannot be null")
-    @Min(value = 0, message = "Value must be greater than or equal to 0")
+    @DatabaseValidation(key = "insurancedPeriodValueYear")
     private int insurancedPeriodValueYear;
-
-    @NotNull(message = "Insurance Period Value Month cannot be null")
-    @Min(value = 0, message = "Value must be greater than or equal to 0")
+    @DatabaseValidation(key = "insurancedPeriodValueMonth")
     private int insurancedPeriodValueMonth;
-
-    @NotNull(message = "Insurance Period Value Day cannot be null")
-    @Min(value = 0, message = "Value must be greater than or equal to 0")
+    @DatabaseValidation(key = "insurancedPeriodValueDay")
     private int insurancedPeriodValueDay;
 
     public String getInsurancedPeriodMethod() {

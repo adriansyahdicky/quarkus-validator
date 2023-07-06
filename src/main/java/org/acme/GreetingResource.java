@@ -11,6 +11,7 @@ import org.acme.service.TObjectService;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.concurrent.ExecutionException;
 
 @Path("/hello")
 public class GreetingResource {
@@ -29,7 +30,7 @@ public class GreetingResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response hello() throws URISyntaxException, IOException {
+    public Response hello() throws URISyntaxException, IOException, ExecutionException, InterruptedException {
         return Response.status(200).entity(ebpValidatorService.validate()).build();
     }
 }

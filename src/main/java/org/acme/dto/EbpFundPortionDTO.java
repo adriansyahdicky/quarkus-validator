@@ -1,7 +1,11 @@
 package org.acme.dto;
 
+import org.acme.validation.DatabaseValidation;
+
 public class EbpFundPortionDTO {
+    @DatabaseValidation(key = "fundCode")
     private String fundCode;
+    @DatabaseValidation(key = "fundPortion")
     private String fundPortion;
 
     public String getFundCode() {

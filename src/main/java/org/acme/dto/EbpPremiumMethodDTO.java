@@ -1,7 +1,11 @@
 package org.acme.dto;
 
+import org.acme.validation.DatabaseValidation;
+
 public class EbpPremiumMethodDTO {
+    @DatabaseValidation(key = "method")
     private String method;
+    @DatabaseValidation(key = "premiumMethodValue")
     private String premiumMethodValue;
 
     public String getMethod() {

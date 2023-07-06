@@ -1,10 +1,15 @@
 package org.acme.dto;
 
+import jakarta.validation.Valid;
+
 import java.util.ArrayList;
 
 public class EbpRootDTO {
+    @Valid
     private EbpOrganizationDTO organization;
+    @Valid
     private EbpProgramDTO program;
+    @Valid
     private ArrayList<EbpInsuredDTO> insured;
 
     public EbpOrganizationDTO getOrganization() {

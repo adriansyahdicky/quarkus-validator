@@ -1,7 +1,11 @@
 package org.acme.dto;
 
+import org.acme.validation.DatabaseValidation;
+
 public class EbpPremiumPeriodicDTO {
+    @DatabaseValidation(key = "premiumPeriodicMethod")
     private String premiumPeriodicMethod;
+    @DatabaseValidation(key = "premiumPeriodicValue")
     private String premiumPeriodicValue;
 
     public String getPremiumPeriodicMethod() {

@@ -1,10 +1,18 @@
 package org.acme.dto;
 
+import jakarta.validation.Valid;
+import org.acme.validation.DatabaseValidation;
+
 public class EbpAdditionalMainBenefitDTO {
+    @DatabaseValidation(key = "benefitCode")
     private String benefitCode;
+    @DatabaseValidation(key = "benefitMethod")
     private String benefitMethod;
+    @DatabaseValidation(key = "rateCode")
     private String rateCode;
+    @DatabaseValidation(key = "benefitValue")
     private String benefitValue;
+    @Valid
     private EbpUwParamsDTO uwParams;
 
     public String getBenefitCode() {

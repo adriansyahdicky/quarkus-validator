@@ -1,6 +1,9 @@
 package org.acme.dto;
 
+import org.acme.validation.DatabaseValidation;
+
 public class EbpAssumptionDTO {
+    @DatabaseValidation(key = "salaryAdjustment")
     private String salaryAdjustment;
 
     public String getSalaryAdjustment() {

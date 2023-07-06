@@ -1,17 +1,33 @@
 package org.acme.dto;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import org.acme.validation.DatabaseValidation;
+
 import java.util.ArrayList;
 
 public class EbpInsuredDTO {
+    @DatabaseValidation(key = "personCif")
     private String personCif;
+    @DatabaseValidation(key = "dateOfBirth")
     private String dateOfBirth;
+    @DatabaseValidation(key = "dateOfWork")
     private String dateOfWork;
+    @DatabaseValidation(key = "wages")
     private String wages;
+    @DatabaseValidation(key = "backServicePremium")
     private String backServicePremium;
+    @DatabaseValidation(key = "comingServicePremium")
     private String comingServicePremium;
+    @DatabaseValidation(key = "maritalStatus")
     private String maritalStatus;
+
+    @NotBlank(message = "Sex Cannot Be Null")
+    @DatabaseValidation(key = "sex")
     private String sex;
+    @Valid
     private EbpMainBenefitDTO mainBenefit;
+    @Valid
     private ArrayList<EbpAdditionalMainBenefitDTO> additionalMainBenefit;
     private ArrayList<Object> riderBenefit;
 

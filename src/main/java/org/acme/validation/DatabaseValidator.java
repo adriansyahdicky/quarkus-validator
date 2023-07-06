@@ -1,5 +1,6 @@
 package org.acme.validation;
 
+import jakarta.enterprise.context.control.ActivateRequestContext;
 import jakarta.inject.Inject;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
@@ -19,8 +20,8 @@ public class DatabaseValidator implements ConstraintValidator<DatabaseValidation
     }
 
     @Override
+    @ActivateRequestContext
     public boolean isValid(Object s, ConstraintValidatorContext context) {
-        System.out.println("OBJECT NAME = " + key);
         TObject tObject = tObjectRepository.findByNameKey(key);
         return tObject != null;
     }

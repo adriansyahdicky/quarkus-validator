@@ -1,22 +1,39 @@
 package org.acme.dto;
 
+import jakarta.validation.Valid;
+import org.acme.validation.DatabaseValidation;
+
 import java.util.ArrayList;
 
 public class EbpProgramDTO {
+    @DatabaseValidation(key = "productCode")
     private String productCode;
+    @DatabaseValidation(key = "planCode")
     private String planCode;
+    @DatabaseValidation(key = "effectiveDate")
     private String effectiveDate;
+    @DatabaseValidation(key = "insuranceStartDate")
     private String insuranceStartDate;
+    @Valid
     private EbpInsurancePeriodDTO insurancedPeriod;
+    @Valid
     private ArrayList<EbpFundPortionDTO> fundPortion;
+    @Valid
     private EbpAssumptionDTO assumption;
+    @Valid
     private EbpCostDTO cost;
+    @Valid
     private EbpMainBenefitDTO mainBenefit;
+    @Valid
     private ArrayList<EbpAdditionalMainBenefitDTO> additionalMainBenefit;
     private ArrayList<Object> riderBenefit;
+    @DatabaseValidation(key = "paymentFrequency")
     private String paymentFrequency;
+    @Valid
     private EbpPremiumPeriodicDTO premiumPeriodic;
+    @Valid
     private EbpPremiumMethodDTO premiumMethod;
+    @DatabaseValidation(key = "contributoryOrganizationValue")
     private String contributoryOrganizationValue;
 
     public String getProductCode() {

@@ -1,21 +1,22 @@
 package org.acme.dto;
 
-import jakarta.validation.constraints.Digits;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import org.acme.validation.DatabaseValidation;
 
 public class EbpOrganizationDTO {
+    @DatabaseValidation(key = "organizationCif")
     private String organizationCif;
     @NotBlank(message = "Group Organization CIF cannot be null")
-    @Digits(integer = 10, fraction = 0, message = "Must be a number")
-    @Min(value = 0, message = "Value must be greater than or equal to 0")
+    @DatabaseValidation(key = "groupOrganizationCif")
     private String groupOrganizationCif;
 
     @NotBlank(message = "Proposal Number cannot be null")
+    @DatabaseValidation(key = "proposalNumber")
     private String proposalNumber;
     private String version;
 
     @NotBlank(message = "Transaction Code cannot be null")
+    @DatabaseValidation(key = "transactionCode")
     private String transactionCode;
 
     public String getOrganizationCif() {
